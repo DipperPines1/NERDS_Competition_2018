@@ -4,7 +4,9 @@
 #include "../Commands/ArcadeDriveWithJoysticks.h"
 
 DriveTrain::DriveTrain() : Subsystem("DriveTrain"),
-	driveTrain(DRIVE_LEFT, DRIVE_RIGHT)
+	driveTrain(DRIVE_LEFT, DRIVE_RIGHT),
+	Lencoder(LA_CHANNEL, LB_CHANNEL),
+	Rencoder(RA_CHANNEL, RB_CHANNEL)
 {
 
 }

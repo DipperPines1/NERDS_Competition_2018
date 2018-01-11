@@ -3,6 +3,7 @@
 
 #include <Commands/Subsystem.h>
 #include <RobotDrive.h>
+#include <Encoder.h>
 
 class DriveTrain : public Subsystem {
 public:
@@ -12,6 +13,8 @@ public:
 	void Stop();
 private:
 	RobotDrive driveTrain;
+	Encoder Lencoder;
+	Encoder Rencoder;
 };
 
 #endif  // DriveTrain_H
