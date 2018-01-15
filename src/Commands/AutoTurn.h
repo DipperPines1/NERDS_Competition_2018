@@ -13,7 +13,8 @@ public:
 	void Interrupted();
 private:
 	double rate;
-	double angle;
+	double currentAngle;
+	double initialAngle;
 	double target;
 };
 

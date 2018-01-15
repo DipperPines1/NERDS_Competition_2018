@@ -4,7 +4,8 @@
 #include "../Commands/ArcadeDriveWithJoysticks.h"
 
 DriveTrain::DriveTrain() : Subsystem("DriveTrain"),
-	driveTrain(DRIVE_LEFT, DRIVE_RIGHT)
+	driveTrain(DRIVE_LEFT, DRIVE_RIGHT),
+	gyro(GYRO_PORT)
 {
 
 }
@@ -21,4 +22,8 @@ void DriveTrain::arcadeDrive(double speed, double turn){
 
 void DriveTrain::Stop(){
 	arcadeDrive(0,0);
+}
+
+double DriveTrain::getAngle(){
+	return gyro.GetYaw();
 }

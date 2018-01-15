@@ -14,4 +14,8 @@ constexpr int LEFT_Y = 1;
 constexpr int RIGHT_X = 2;
 constexpr int RIGHT_Y = 3;
 
+//Gyro Values
+constexpr int GYRO_PORT = 0;
+
+
 #endif  // ROBOTMAP_H
