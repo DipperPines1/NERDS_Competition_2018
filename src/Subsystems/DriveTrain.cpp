@@ -24,3 +24,11 @@ void DriveTrain::arcadeDrive(double speed, double turn){
 void DriveTrain::Stop(){
 	arcadeDrive(0,0);
 }
+
+double DriveTrain::getEncoderValue(encoderSide choice){
+	if (choice == kLeft){
+		return Lencoder.GetDistance();
+	}else if(choice == kRight){
+		return Rencoder.GetDistance();
+	}
+}
