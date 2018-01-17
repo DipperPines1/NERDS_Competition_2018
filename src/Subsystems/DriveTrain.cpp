@@ -8,7 +8,8 @@
 DriveTrain::DriveTrain() : Subsystem("DriveTrain"),
 	leftController(DRIVE_LEFT),
 	rightController(DRIVE_RIGHT),
-	driveTrain(leftController, rightController)
+	driveTrain(leftController, rightController),
+	gyro(SPI::Port::kOnboardCS0)
 {
 
 }
@@ -25,4 +26,9 @@ void DriveTrain::arcadeDrive(double speed, double turn){
 
 void DriveTrain::Stop(){
 	arcadeDrive(0,0);
+}
+
+double DriveTrain::getAngle(){
+	return gyro.GetAngle();
+
 }
