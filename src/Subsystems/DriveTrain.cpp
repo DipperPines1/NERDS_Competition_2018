@@ -2,14 +2,13 @@
 #include "../RobotMap.h"
 
 #include "../Commands/ArcadeDriveWithJoysticks.h"
-
-
+#include <I2C.h>
 
 DriveTrain::DriveTrain() : Subsystem("DriveTrain"),
 	leftController(DRIVE_LEFT),
 	rightController(DRIVE_RIGHT),
 	driveTrain(leftController, rightController),
-	gyro(SPI::Port::kOnboardCS0)
+	gyro(I2C::Port::kOnboard)
 {
 
 }

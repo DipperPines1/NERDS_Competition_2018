@@ -16,4 +16,7 @@ constexpr int RIGHT_Y = 5;
 constexpr int LEFT_TRIG = 2;
 constexpr int RIGHT_TRIG = 3;
 
+//Joystick Buttons
+constexpr int BUTTON_A = 1;
+
 #endif  // ROBOTMAP_H
