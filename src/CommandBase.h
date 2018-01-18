@@ -5,6 +5,7 @@
 #include <string>
 
 #include <Commands/Command.h>
+#include <networktables/NetworkTableInstance.h>
 
 #include "OI.h"
 #include "Subsystems/DriveTrain.h"
@@ -21,6 +22,7 @@ public:
 	CommandBase() = default;
 
 	// Create a single static instance of all of your subsystems
+	static std::unique_ptr<nt::NetworkTableInstance> networkTable;
 	static std::unique_ptr<OI> oi;
 	static std::unique_ptr<DriveTrain> drivetrain;
 };
